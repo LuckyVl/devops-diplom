@@ -1,0 +1,191 @@
+# =============================================================================
+# TERRAFORM
+# =============================================================================
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+crash.log
+*.lock.info.hcl
+.terraform.lock.hcl
+
+# =============================================================================
+# SENSITIVE DATA & SECRETS (НИКОГДА не коммитить!)
+# =============================================================================
+.env
+*.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.crt
+kubeconfig
+kube_config_cluster.yml
+*.kubeconfig
+ansible_vault_password
+*.vault_pass
+id_rsa
+id_rsa.pub
+*.ppk
+credentials.json
+service-account-key.json
+yc-credentials.yaml
+
+# =============================================================================
+# IDE & EDITORS (PyCharm, VS Code, etc.)
+# =============================================================================
+# PyCharm / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+target/
+*.log
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Vim / NeoVim
+*.swp
+*.swo
+*.swn
+*.un~
+.netrwhist
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# PYTHON
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Poetry
+.pypoetry/
+poetry.lock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.pytest_cache/
+
+# =============================================================================
+# KUBERNETES / HELM
+# =============================================================================
+# Локальные конфиги кластеров (если генерируются локально)
+*.kubeconfig
+kubeconfig.yaml
+kube_config_*.yml
+
+# Helm временные файлы
+*.tgz
+.charts/
+helm-debug-output.txt
+
+# Kustomize
+.kustomize/
+
+# =============================================================================
+# ANSIBLE
+# =============================================================================
+ansible-log
+*.retry
+ansible_facts.json
+host_vars/*.yml
+group_vars/*.yml
+!host_vars/.gitkeep
+!group_vars/.gitkeep
+# Исключение: шаблоны можно коммитить, реальные значения — нет
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+# Docker desktop
+.docker/
+
+# Docker build cache
+.dockerignore
+
+# =============================================================================
+# GITHUB ACTIONS
+# =============================================================================
+# Локальные логи запусков (если используются)
+.github/workflows/*.log
+
+# =============================================================================
+# OS & GENERAL
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =============================================================================
+# DOCUMENTATION & TEMP
+# =============================================================================
+# Временные файлы документации
+docs/*.tmp
+docs/*.bak
+*.pdf
+*.png
+*.jpg
+!.gitkeep
+# Исключение: скриншоты в img/ можно коммитить осознанно
+!img/
+
+# =============================================================================
+# SCRIPTS OUTPUT
+# =============================================================================
+scripts/output/
+scripts/logs/
+*.csv
+*.json
+!*.example.json
+
+/.idea/
