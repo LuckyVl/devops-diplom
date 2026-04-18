@@ -189,4 +189,4 @@ scripts/logs/
 !*.example.json
 
 /.idea/
-./ai.chat
+.ai.chat
